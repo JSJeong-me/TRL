@@ -56,4 +56,3 @@
 * 실습 예제: SFT 1개, DPO 1개, Online RL 1개
 * 평가 항목: style/persona 변화, task accuracy 개선, preference alignment 개선
 
-이제 다음 단계로는 이 내용을 바탕으로 **강의 전체 목차(예: 1일/2일 과정 또는 6~8개 모듈)**부터 잡는 것이 좋습니다.
