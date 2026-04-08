@@ -37,7 +37,7 @@ TRL 문서 기준으로 DPO는 `prompt/chosen/rejected` 형태의 preference 데
 실습은 두 트랙으로 나눕니다.
 첫 번째는 **assistant 성격 바꾸기**이고, 두 번째는 **정답 형식 맞추기**입니다. 여기서 만든 SFT 체크포인트를 이후 세 가지 비교 실습의 공통 시작점으로 씁니다. 이 모듈의 핵심 메시지는 “비교는 같은 출발선에서 해야 한다”입니다.
 
-## Module 5. DPO 실습: 오프라인 선호학습이 어디까지 가능한가
+## Module 6. DPO 실습: 오프라인 선호학습이 어디까지 가능한가
 
 이 모듈은 DPO를 독립적으로 실습하는 단계입니다.
 DPO는 RLHF의 목표를 분류형 손실로 직접 최적화하는 방식으로 소개되며, 논문은 이를 **stable, performant, computationally lightweight** 하다고 설명합니다. TRL의 DPOTrainer 역시 preference 데이터셋을 사용한 빠른 실험 구성을 제공합니다. ([arXiv][1])
@@ -48,7 +48,7 @@ DPO는 RLHF의 목표를 분류형 손실로 직접 최적화하는 방식으로
 여기서 첫 번째 비교 실습을 넣습니다.
 수강생은 동일한 평가셋에 대해 “SFT vs DPO”를 비교하고, DPO가 잘하는 부분과 못하는 부분을 적습니다. 보통 이 단계에서는 **스타일 정렬, 응답 선호도, 톤 일관성** 같은 항목이 잘 드러나도록 설계하는 것이 교육 효과가 좋습니다.
 
-## Module 6. PPO 실습: 보상모델과 가치모델이 들어가는 온라인 RL
+## Module 7. PPO 실습: 보상모델과 가치모델이 들어가는 온라인 RL
 
 이 모듈에서는 PPO를 통해 “진짜 RLHF형 루프”를 경험하게 합니다.
 PPO는 환경에서 샘플을 수집하고 surrogate objective로 여러 minibatch epoch를 수행하는 정책경사 계열 방법으로 제안되었고, TRL의 PPOTrainer 문서에서도 reward model과 value model, KL 관련 로그를 전제로 한 구조가 드러납니다. 즉 PPO는 DPO보다 구성요소가 더 많고, 학습 루프도 더 온라인적입니다. ([arXiv][4])
