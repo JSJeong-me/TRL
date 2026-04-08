@@ -59,7 +59,7 @@ PPO는 환경에서 샘플을 수집하고 surrogate objective로 여러 minibat
 이 모듈의 비교 포인트는 명확합니다.
 DPO는 오프라인 preference pair만으로 진행되지만, PPO는 reward/value 구조와 온라인 샘플링이 필요합니다. 그래서 구현 복잡도와 계산비용은 커지지만, **명시적 reward가 잘 정의되는 과제**에서는 더 직접적인 최적화가 가능합니다. ([arXiv][1])
 
-## Module 7. GRPO 실습: PPO와 무엇이 같고 무엇이 다른가
+## Module 8. GRPO 실습: PPO와 무엇이 같고 무엇이 다른가
 
 이 모듈은 PPO와 GRPO를 정면 비교하는 단계입니다.
 DeepSeekMath는 GRPO를 **PPO의 변형**으로 소개하면서 수학 추론을 강화하면서도 PPO의 메모리 사용을 줄이는 방향을 강조합니다. TRL 문서도 GRPO를 prompt-only 데이터와 reward function 중심으로 빠르게 실험할 수 있게 안내하고 있습니다. 또한 GRPO Trainer 설명은 최근 구현에서 KL term 기본값을 0으로 두는 점과, 손실 설계가 PPO와 유사하지만 운영상 선택지가 다름을 보여 줍니다. ([arXiv][6])
@@ -70,7 +70,7 @@ DeepSeekMath는 GRPO를 **PPO의 변형**으로 소개하면서 수학 추론을
 이 모듈이 끝나면 수강생은 최소한 다음을 설명할 수 있어야 합니다.
 “DPO는 offline preference alignment”, “PPO는 reward/value 기반 online RL”, “GRPO는 PPO 계열이지만 그룹 상대 비교를 활용해 보다 경량화된 RL 실험에 적합할 수 있다.” ([arXiv][1])
 
-## Module 8. 통합 비교 프로젝트: DPO vs PPO vs GRPO
+## Module 9. 통합 비교 프로젝트: DPO vs PPO vs GRPO
 
 마지막 모듈은 세 방법을 나란히 비교하는 종합 프로젝트입니다.
 각 조는 동일한 base model과 동일한 평가셋으로 세 가지 경로를 모두 실행합니다. 경로 A는 **SFT → DPO**, 경로 B는 **SFT → PPO**, 경로 C는 **SFT → GRPO**입니다. 비교 항목은 반드시 네 가지로 고정합니다: 데이터 준비 난이도, 구현 복잡도, 계산 자원, 최종 성능. 이 설계는 앞선 모듈에서 학습한 차이를 하나의 표와 실험 보고서로 수렴시키는 역할을 합니다.
